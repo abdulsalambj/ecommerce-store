@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register - TechGadgets Hub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand"><a href="index.html">AS Electronic</a></div>
+    </div>
+  </nav>
+
+  <section class="products">
+    <h2>Register</h2>
+    <form onsubmit="registerUser(event)" class="auth-form">
+      <input type="email" id="register-email" placeholder="Email" required />
+      <input type="password" id="register-password" placeholder="Password" required />
+      <button type="submit" class="btn-accent">Register</button>
+      <p>Already have an account? <a href="login.html">Login here</a>.</p>
+    </form>
+  </section>
+
+  <div id="custom-alert" class="alert-box d-none"></div>
+
+  <script src="auth.js"></script>
+</body>
+</html>

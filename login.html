@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - TechGadgets Hub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="checkLoginMessage();">
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand"><a href="index.html">AS Electronic</a></div>
+    </div>
+  </nav>
+
+  <section class="products">
+    <h2>Login</h2>
+    <form onsubmit="loginUser(event)" class="auth-form">
+      <input type="email" id="login-email" placeholder="Email" required />
+      <input type="password" id="login-password" placeholder="Password" required />
+      <button type="submit" class="btn-accent">Login</button>
+      <p>Don't have an account? <a href="register.html">Register here</a>.</p>
+      <div id="login-alert"></div>
+    </form>
+  </section>
+
+  <div id="custom-alert" class="alert-box d-none"></div>
+
+  <script src="auth.js"></script>
+  <script>
+    function checkLoginMessage() {
+      const msg = sessionStorage.getItem("loginMessage");
+      const type = sessionStorage.getItem("alertType") || "warning";
+      if (msg) {
+        showAlert(msg, type);
+        sessionStorage.removeItem("loginMessage");
+        sessionStorage.removeItem("alertType");
+      }
+    }
+  </script>
+</body>
+</html>

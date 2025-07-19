@@ -1,0 +1,439 @@
+/* ========== COLOR THEME ========== */
+/* :root {
+  --bg-dark: #1E1B18;
+  --bg-card: #292522;
+  --text-light: #F4F1EE;
+  --accent: #FF6F00;
+  --accent-light: #FFD54F;
+  --hover-glow: #FF6F0020;
+  --success: #16A34A;
+  --warning: #F59E0B;
+} */
+
+/* ========== GLOBAL ========== */
+/* body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+} */
+
+/* a {
+  text-decoration: none;
+  color: inherit;
+} */
+
+/* ========== NAVBAR ========== */
+/* .navbar {
+  background-color: var(--bg-dark);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #333;
+} */
+
+/* .nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+} */
+
+
+/* .nav-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--accent);
+} */
+
+/* .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+} */
+
+/* .cart-link a {
+  background-color: var(--accent);
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+} */
+
+/* ========== HERO SECTION ========== */
+/* .hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: var(--bg-card);
+} */
+
+/* .hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+} */
+
+/* .hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+} */
+/* 
+.btn-accent {
+  background-color: var(--accent);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.btn-accent:hover {
+  box-shadow: 0 0 12px var(--hover-glow);
+  cursor: pointer;
+}
+
+========== PRODUCTS SECTION ==========
+.products {
+  padding: 3rem 2rem;
+}
+
+.products h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--accent-light);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+========== PRODUCT CARD ==========
+.product-card {
+  background-color: var(--bg-card);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px var(--hover-glow);
+}
+
+.product-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.product-card h5 {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.product-card p {
+  margin: 0.5rem 0;
+}
+
+.product-card button {
+  margin-top: 1rem;
+}
+
+========== FOOTER ==========
+.footer {
+  background-color: var(--bg-dark);
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid #333;
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+========== ALERT BOX ==========
+.alert-box {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--warning);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  font-weight: bold;
+  z-index: 999;
+}
+
+.alert-box.success {
+  background-color: var(--success);
+}
+
+.alert-box.warning {
+  background-color: var(--warning);
+}
+
+.d-none {
+  display: none;
+}
+
+
+
+.auth-form {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--bg-card);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.auth-form input {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.auth-form p {
+  font-size: 0.9rem;
+  text-align: center;
+} */
+
+
+
+/* ========== SHOP OF SHIRT THEME ========== */
+
+:root {
+  --bg-dark: #fdfdfd;
+  --bg-card: #ffffff;
+  --text-main: #2c2c2c;
+  --accent: #264653;
+  --accent-light: #e9c46a;
+  --hover-glow: rgba(233, 196, 106, 0.3);
+  --success: #2a9d8f;
+  --warning: #e76f51;
+}
+
+/* ========== GLOBAL ========== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ========== NAVBAR ========== */
+.navbar {
+  /* position: fixed; */
+  /* top: 0; */
+  /* left: 0px; */
+  /* width: 100%; */
+  background-color: var(--accent);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  font-family: 'Georgia', serif;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.cart-link a {
+  background-color: var(--accent-light);
+  color: #000;
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+
+
+
+/* ========== HERO SECTION ========== */
+/* .hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, #f4f1de, #fdfdfd);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: var(--accent);
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--text-main);
+} */
+
+.btn-accent {
+  background-color: var(--accent);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.btn-accent:hover {
+  box-shadow: 0 0 12px var(--hover-glow);
+  cursor: pointer;
+}
+
+/* ========== PRODUCTS SECTION ========== */
+.products {
+  padding: 3rem 2rem;
+}
+
+.products h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: var(--accent);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+/* ========== PRODUCT CARD ========== */
+.product-card {
+  background-color: var(--bg-card);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px var(--hover-glow);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.product-card h5 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.product-card p {
+  margin: 0.5rem 0;
+  color: var(--text-main);
+}
+
+.product-card button {
+  margin-top: 1rem;
+}
+
+/* ========== FOOTER ========== */
+.footer {
+  background-color: var(--accent);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+/* ========== ALERT BOX ========== */
+.alert-box {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--warning);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  font-weight: bold;
+  z-index: 999;
+}
+
+.alert-box.success {
+  background-color: var(--success);
+}
+
+.alert-box.warning {
+  background-color: var(--warning);
+}
+
+.d-none {
+  display: none;
+}
+
+/* ========== AUTH FORM ========== */
+.auth-form {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--bg-card);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.auth-form input {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: var(--text-main);
+}
+
+.auth-form p {
+  font-size: 0.9rem;
+  text-align: center;
+}

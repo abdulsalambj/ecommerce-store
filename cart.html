@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Cart</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="renderCart(); updateNavbarAuthStatus();">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand"><a href="index.html">AS Electronic</a></div>
+      <div class="nav-right">
+        <div id="navbar-user-controls"></div>
+        <div id="cart-button-container" class="cart-link">
+          <a href="cart.html">🛒 Cart (<span id="cart-count">0</span>)</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Cart Section -->
+  <section class="products">
+    <h2>Your Cart</h2>
+    <div id="cart-items" class="product-grid"></div>
+    <hr />
+    <div class="cart-summary">
+      <p>Total Quantity: <span id="total-qty">0</span></p>
+      <p>Total Price: Rs <span id="total-price">0</span></p>
+    </div>
+  </section>
+
+  <!-- Floating Alert -->
+  <div id="custom-alert" class="alert-box d-none"></div>
+
+  <script src="auth.js"></script>
+  <script src="app.js"></script>
+  <script>
+    function renderCart() {
+      const user = JSON.parse(localStorage.getItem("currentUser"));
+      if (!user || !user.email) {
+        sessionStorage.setItem("loginMessage", "Please log in to view your cart.");
+        sessionStorage.setItem("alertType", "warning");
+        window.location.href = "login.html";
+        return;
+      }
+
+      const cartKey = `cart_${user.email}`;
+      const cart = JSON.parse(localStorage.getItem(cartKey)) || [];
+      const cartContainer = document.getElementById("cart-items");
+      const totalQtyEl = document.getElementById("total-qty");
+      const totalPriceEl = document.getElementById("total-price");
+
+      cartContainer.innerHTML = "";
+
+      let totalQty = 0;
+      let totalPrice = 0;
+
+      if (cart.length === 0) {
+        cartContainer.innerHTML = `<p>Your cart is empty.</p>`;
+        totalQtyEl.textContent = "0";
+        totalPriceEl.textContent = "0";
+        return;
+      }
+
+      cart.forEach((item, index) => {
+        const subtotal = item.price * item.quantity;
+        totalQty += item.quantity;
+        totalPrice += subtotal;
+
+        cartContainer.innerHTML += `
+          <div class="product-card">
+            <h5>${item.name}</h5>
+            <p>Price: Rs ${item.price}</p>
+            <p>Subtotal: Rs ${subtotal}</p>
+            <div>
+              <button onclick="updateQuantity(${index}, -1)" class="btn-accent">-</button>
+              <span style="margin: 0 10px;">${item.quantity}</span>
+              <button onclick="updateQuantity(${index}, 1)" class="btn-accent">+</button>
+            </div>
+          </div>
+        `;
+      });
+
+      totalQtyEl.textContent = totalQty;
+      totalPriceEl.textContent = totalPrice;
+      updateCartCount();
+    }
+
+    function updateQuantity(index, change) {
+      const user = JSON.parse(localStorage.getItem("currentUser"));
+      const cartKey = `cart_${user.email}`;
+      let cart = JSON.parse(localStorage.getItem(cartKey)) || [];
+
+      if (!cart[index]) return;
+
+      cart[index].quantity += change;
+      if (cart[index].quantity <= 0) {
+        cart.splice(index, 1);
+      }
+
+      localStorage.setItem(cartKey, JSON.stringify(cart));
+      renderCart();
+    }
+  </script>
+</body>
+</html>

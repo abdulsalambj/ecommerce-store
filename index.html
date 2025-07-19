@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechGadgets Hub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="renderProducts(); updateCartCount(); updateNavbarAuthStatus(); checkLoginSuccess();">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">AS Electronic</div>
+      <div class="nav-right">
+        <div id="navbar-user-controls"></div>
+        <div id="cart-button-container" class="cart-link">
+          <a href="cart.html">
+            🛒 Cart (<span id="cart-count">0</span>)
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <!-- <header class="hero">
+    <h1>Explore the Future of Tech</h1>
+    <p>Premium gadgets designed for your everyday life.</p>
+    <a href="#product-container" class="btn-accent">Shop Now</a>
+  </header> -->
+
+  <!-- Product Section -->
+  <section class="products">
+    <h2>Featured Products</h2>
+    <div id="product-container" class="product-grid">
+      <!-- JS will render product cards here -->
+    </div>
+  </section>
+
+  <!-- Floating Alert -->
+  <div id="custom-alert" class="alert-box d-none"></div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 AS Electronic. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="auth.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
