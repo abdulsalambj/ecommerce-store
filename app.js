@@ -1,8 +1,8 @@
 const products = [
-  { id: 1, name: "Bluetooth Speaker", price: 75000, image: "assets/Lapton-image2.jfif" },
-  { id: 2, name: "Smartwatch Pro", price: 47000, image: "assets/ipad-Tablet..jfif" },
-  { id: 3, name: "Wireless Headphones", price: 25000, image: "assets/LCD-image2.jfif" },
-  { id: 4, name: "Power Bank 10,000mAh", price: 16000, image: "assets/RAM-image.jfif" }
+  { id: 1, name: "Bluetooth Speaker", price: 75000, image: "assets/bluetoothspeaker.jpg" },
+  { id: 2, name: "Smartwatch Pro", price: 47000, image: "assets/smartwatch.jpg" },
+  { id: 3, name: "Wireless Headphones", price: 25000, image: "assets/wirelessheadphones.png" },
+  { id: 4, name: "Power Bank 10,000mAh", price: 16000, image: "assets/powerbank.jfif" }
 ];
 
 // Show floating alert
